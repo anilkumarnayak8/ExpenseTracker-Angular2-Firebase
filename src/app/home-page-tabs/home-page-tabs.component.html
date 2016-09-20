@@ -1,0 +1,20 @@
+<md-tab-group>
+    <md-tab>
+        <template md-tab-label>Add</template>
+        <template md-tab-content>
+            <md-card>
+                <md-card-title>Add a Expense</md-card-title>
+                <md-card-content>
+                	<app-add-expense-form></app-add-expense-form>
+            	</md-card-content>
+            </md-card>
+        </template>
+    </md-tab>
+    <md-tab>
+        <template md-tab-label>View</template>
+        <template md-tab-content>
+            <app-expenses-summary [expenses]="expenses"></app-expenses-summary>
+            <app-expenses-list [expenses]="expenses"></app-expenses-list>
+        </template>
+    </md-tab>
+</md-tab-group>

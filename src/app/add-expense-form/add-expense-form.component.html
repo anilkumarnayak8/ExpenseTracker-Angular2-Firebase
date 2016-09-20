@@ -1,0 +1,21 @@
+<form action="">
+    <select name="" id="" [(ngModel)]="expense.category" name="category">
+        <option *ngFor="let category of categories" [value]="category.name">{{category.name}}</option>
+    </select>
+    <md-input placeholder="amount" type="number" [(ngModel)]="expense.amount" name="amount">
+    	<span md-prefix>Rs. </span>
+    	<span md-suffix>.00</span>
+    </md-input>
+    <br>
+    <p>
+    	Quick Denominations
+    </p>
+    <div class="denominations">
+        <button md-mini-fab *ngFor="let d of denominations" (click)="updateAmount(d)">
+            {{d}}
+        </button>
+        
+    </div>
+    <br>
+    <button md-raised-button (click)="createExpense()">Create</button>
+</form>

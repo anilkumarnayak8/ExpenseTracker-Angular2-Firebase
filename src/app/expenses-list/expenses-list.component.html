@@ -1,0 +1,6 @@
+
+<md-list>
+	<md-list-item *ngFor="let expense of expenses">
+		<p md-line>{{expense.category}} - {{expense.amount | rupees}}</p>
+	</md-list-item>
+</md-list>
